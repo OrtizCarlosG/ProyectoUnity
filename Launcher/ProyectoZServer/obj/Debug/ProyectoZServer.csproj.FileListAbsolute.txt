@@ -1,0 +1,10 @@
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\bin\Debug\ProyectoZServer.exe.config
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\bin\Debug\ProyectoZServer.exe
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\bin\Debug\ProyectoZServer.pdb
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\obj\Debug\ProyectoZServer.Form1.resources
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\obj\Debug\ProyectoZServer.Properties.Resources.resources
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\obj\Debug\ProyectoZServer.csproj.GenerateResource.cache
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\obj\Debug\ProyectoZServer.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\obj\Debug\ProyectoZServer.exe
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\obj\Debug\ProyectoZServer.pdb
+C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZServer\obj\Debug\ProyectoZServer.csprojAssemblyReference.cache

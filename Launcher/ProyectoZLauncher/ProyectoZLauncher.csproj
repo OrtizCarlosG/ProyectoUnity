@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0585E8E5-581F-4F44-B38E-940915150A71}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoZLauncher</RootNamespace>
+    <AssemblyName>ProyectoZLauncher</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\PC MIA\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ProyectoZ.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProyectoZ.UI\bin\Debug\ProyectoZ.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connections\Client.cs" />
+    <Compile Include="Connections\ClientHandle.cs" />
+    <Compile Include="Connections\ClientSend.cs" />
+    <Compile Include="Connections\Packet.cs" />
+    <Compile Include="Connections\ThreadManager.cs" />
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificaciones.Designer.cs">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\Account.cs" />
+    <Compile Include="Objetos\Globals.cs" />
+    <Compile Include="Objetos\imageConverter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Updater\Common.cs" />
+    <Compile Include="Updater\Computer.cs" />
+    <Compile Include="Updater\CRCProcessor.cs" />
+    <Compile Include="Updater\FileChecker.cs" />
+    <Compile Include="Updater\FileDownloader.cs" />
+    <Compile Include="Updater\ListDownloader.cs" />
+    <Compile Include="Updater\ListProcessor.cs" />
+    <Compile Include="Updater\Networking.cs" />
+    <Compile Include="Updater\Starter.cs" />
+    <Compile Include="Updater\Texts.cs" />
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificaciones.resx">
+      <DependentUpon>Notificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\ProyectoZ.UI\bin\Debug\ProyectoZ.UI.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_detalle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize-Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foto 10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarioLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JugarLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JugarHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegistroLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegistroLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RePassLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmailLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaptchaLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captcha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\optionsLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Multiply_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_28px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
