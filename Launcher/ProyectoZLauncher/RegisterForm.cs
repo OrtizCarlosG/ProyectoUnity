@@ -16,6 +16,7 @@ namespace ProyectoZLauncher
     {
         public RegisterForm()
         {
+            Globals.setRegisterForm(this);
             InitializeComponent();
         }
 
@@ -120,6 +121,14 @@ namespace ProyectoZLauncher
             Account _account = new Account(userTxt.Text, passTxt.Text, repassTxt.Text, emailTxt.Text, captchaTxt.Text);
             ClientSend.RegisterPakcet(_account);
             GC.Collect();
+        }
+
+        public void setCaptcha(string _captcha)
+        {
+            Invoke(new MethodInvoker(() =>
+            {
+                captchaLbl.Text = _captcha;
+            }));
         }
     }
 }

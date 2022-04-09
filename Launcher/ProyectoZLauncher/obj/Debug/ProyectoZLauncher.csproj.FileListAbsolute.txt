@@ -16,4 +16,3 @@ C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZLauncher\obj\Debug\Proye
 C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZLauncher\obj\Debug\ProyectoZLauncher.GameForm.resources
 C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZLauncher\obj\Debug\ProyectoZLauncher.RegisterForm.resources
 C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZLauncher\obj\Debug\ProyectoZLauncher.Notificaciones.resources
-C:\Users\Carlos\source\repos\ProyectoZLauncher\ProyectoZLauncher\obj\Debug\ProyectoZLauncher.TestForm.resources

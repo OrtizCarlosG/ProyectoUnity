@@ -21,6 +21,7 @@ namespace ProyectoZServer.SQL
             {
                 cnn.Open();
                 cnn.Close();
+                Globals.getForm().addToLog($"Connected to SQL Server.");
             }
             catch (Exception ex)
             {

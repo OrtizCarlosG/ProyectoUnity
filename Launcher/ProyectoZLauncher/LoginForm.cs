@@ -27,6 +27,7 @@ namespace ProyectoZLauncher
         private void registerLbl_Click(object sender, EventArgs e)
         {
             GC.Collect();
+            ClientSend.requestCaptcha();
             Globals.getMenu().openFormInPanel(new RegisterForm());
         }
 

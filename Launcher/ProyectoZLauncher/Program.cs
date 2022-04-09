@@ -16,7 +16,7 @@ namespace ProyectoZLauncher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestForm());
+            Application.Run(new MenuForm());
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
         }
 
