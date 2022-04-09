@@ -11,9 +11,10 @@ namespace ProyectoZLauncher.Objetos
     class Globals
     {
 
-        public static MenuForm _menu;
-        public static LoginForm _loginForm;
-        public static GameForm _gameForm;
+        private static MenuForm _menu;
+        private static LoginForm _loginForm;
+        private static RegisterForm _registerForm;
+        private static GameForm _gameForm;
 
         public static string ServerURL = "http://localhost/ProyectoZ/";
         public static string PatchlistName = "updateList.txt";
@@ -76,6 +77,16 @@ namespace ProyectoZLauncher.Objetos
         public static MenuForm getMenu()
         {
             return _menu;
+        }
+
+        public static void setRegisterForm(RegisterForm _form)
+        {
+            _registerForm = _form;
+        }
+
+        public static RegisterForm getRegisterForm()
+        {
+            return _registerForm;
         }
 
         public static void Notify(string msg, string tittle, Notificaciones.alertTypeEnum _type)

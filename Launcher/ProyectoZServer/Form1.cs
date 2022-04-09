@@ -33,7 +33,6 @@ namespace ProyectoZServer
             Thread mainThread = new Thread(new ThreadStart(MainThread));
             mainThread.Start();
             Server.Start(50, 26951);
-            addToLog(Objetos.ImageConverter.DefaultImage());
         }
         private static void MainThread()
         {

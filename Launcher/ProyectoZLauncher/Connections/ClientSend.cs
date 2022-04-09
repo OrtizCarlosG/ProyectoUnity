@@ -81,6 +81,14 @@ namespace ProyectoZLauncher.Connections
                 SendTCPData(_packet);
             }
         }
+
+        public static void requestCaptcha()
+        {
+            using (Packet _packet = new Packet((int)ClientPackets.requestCaptcha))
+            {
+                SendTCPData(_packet);
+            }
+        }
         #endregion
     }
 }

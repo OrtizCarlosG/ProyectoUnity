@@ -288,7 +288,8 @@ namespace ProyectoZLauncher.Connections
             { (int)ServerPackets.loginResult, ClientHandle.loginResult },
             { (int)ServerPackets.banResult, ClientHandle.banResult },
             { (int)ServerPackets.clientKey, ClientHandle.ClientCode },
-            { (int)ServerPackets.profileImage, ClientHandle.drawImage }
+            { (int)ServerPackets.profileImage, ClientHandle.drawImage },
+            { (int)ServerPackets.returnCaptcha, ClientHandle.reciveCaptcha }
         };
         }
 

@@ -146,7 +146,8 @@ namespace ProyectoZServer.ServerConnections
                 { (int)ClientPackets.register, ServerHandle.RegisterRecived },
                 { (int)ClientPackets.startAcc, ServerHandle.AccountStartRecived },
                 { (int)ClientPackets.profileImage, ServerHandle.returnProfileImage },
-                { (int)ClientPackets.changeImage, ServerHandle.ChangeProfileImage }
+                { (int)ClientPackets.changeImage, ServerHandle.ChangeProfileImage },
+                { (int)ClientPackets.requestCaptcha, ServerHandle.GenerateCaptcha }
             };
             Console.WriteLine("Initialized packets.");
         }

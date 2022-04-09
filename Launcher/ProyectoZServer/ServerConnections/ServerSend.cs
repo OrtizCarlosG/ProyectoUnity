@@ -128,6 +128,16 @@ namespace ProyectoZServer.ServerConnections
                 SendTCPData(_toClient, _packet);
             }
         }
+
+        public static void returnCaptcha(int _toClient)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.returnCaptcha))
+            {
+                _packet.Write(Server.clients[_toClient].captcha);
+
+                SendTCPData(_toClient, _packet);
+            }
+        }
         #endregion
     }
 }

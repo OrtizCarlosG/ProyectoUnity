@@ -62,6 +62,12 @@ namespace ProyectoZLauncher.Connections
             Globals.getGameForm().profileImage.Image = imageConverter.converToImage(image);
         }
 
+        public static void reciveCaptcha(Packet _packet)
+        {
+            string _captcha = _packet.ReadString();
+
+            Globals.getRegisterForm().setCaptcha(_captcha);
+        }
 
     }
 }

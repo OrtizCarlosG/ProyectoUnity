@@ -93,9 +93,13 @@ namespace ProyectoZServer.ServerConnections
                     if (!Login.doesEmailExists(_email))
                     {
                         string _answer = _packet.ReadString();
-                        string _hwid = _packet.ReadString();
-                        string _ip = Server.RemovePort(Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint.ToString());
-                        Register.insertNewAccount(_account, _password, _email, _hwid, _ip, DateTime.Now, ImageConverter.DefaultImage());
+                        if (_answer.Equals(Server.clients[_fromClient].captcha))
+                        {
+                            string _hwid = _packet.ReadString();
+                            string _ip = Server.RemovePort(Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint.ToString());
+                            Register.insertNewAccount(_account, _password, _email, _hwid, _ip, DateTime.Now, ImageConverter.DefaultImage());
+                            Globals.getForm().addToLog($"New account: {_account} from: {_ip} HWID: {_hwid}");
+                        }
                     }
                 }
                 Globals.getSQL().closeDB();
@@ -143,5 +147,10 @@ namespace ProyectoZServer.ServerConnections
             Globals.getSQL().closeDB();
         }
 
+        public static void GenerateCaptcha(int _fromClient, Packet _packet)
+        {
+            Server.clients[_fromClient].captcha = Client.RandomString(5);
+            ServerSend.returnCaptcha(_fromClient);
+        }
     }
 }

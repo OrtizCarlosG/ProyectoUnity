@@ -12,7 +12,8 @@ namespace ProyectoZServer.ServerConnections
         registerResult,
         banResult,
         clientKey,
-        profileImage
+        profileImage,
+        returnCaptcha
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -22,7 +23,8 @@ namespace ProyectoZServer.ServerConnections
         register,
         startAcc,
         profileImage,
-        changeImage
+        changeImage,
+        requestCaptcha
     }
 
     public class Packet : IDisposable

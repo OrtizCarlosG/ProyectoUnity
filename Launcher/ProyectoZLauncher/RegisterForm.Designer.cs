@@ -48,6 +48,7 @@ namespace ProyectoZLauncher
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.captchaLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -310,12 +311,23 @@ namespace ProyectoZLauncher
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // captchaLbl
+            // 
+            this.captchaLbl.AutoSize = true;
+            this.captchaLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.captchaLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.captchaLbl.Location = new System.Drawing.Point(144, 347);
+            this.captchaLbl.Name = "captchaLbl";
+            this.captchaLbl.Size = new System.Drawing.Size(0, 20);
+            this.captchaLbl.TabIndex = 27;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(326, 457);
+            this.Controls.Add(this.captchaLbl);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.regBtn);
             this.Controls.Add(this.pictureBox11);
@@ -349,6 +361,7 @@ namespace ProyectoZLauncher
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -372,5 +385,6 @@ namespace ProyectoZLauncher
         private Guna.UI.WinForms.GunaLineTextBox captchaTxt;
         private Guna.UI.WinForms.GunaGradientButton regBtn;
         private Guna.UI.WinForms.GunaGradientButton backBtn;
+        private System.Windows.Forms.Label captchaLbl;
     }
 }
